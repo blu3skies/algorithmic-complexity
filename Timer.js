@@ -23,3 +23,8 @@ function createArrayAndAdd() {
   }, 0);
 }
 
+function codeToBeTested() {
+  var array = randomArray(50000) 
+  array.pop()
+}
+
