@@ -1,4 +1,4 @@
-function timer(methodToTest) {
+function timer(methodToTest, arrSize) {
   var start = new Date().getTime();
   methodToTest(arrSize)
   var end = new Date().getTime();
@@ -16,15 +16,17 @@ function findAverage(methodToTest, arrSize) {
   return (sum / arrOfTimes.length)
 }
 
-function createArrayAndAdd() {
-  var array = randomArray(50000) 
-  var sum = array.reduce(function(a, b){
-      a + b;
-  }, 0);
-}
-
 function codeToBeTested(arrSize) {
   var array = randomArray(arrSize) 
-  array.pop()
+  array.reverse();
 }
 
+function results(methodToTest) {
+  var arrOfResults = []
+  var start = 5000
+  var i;
+  for (i = start; i < 105000; i += 5000) {
+    arrOfResults.push(findAverage(methodToTest, i))
+  }
+  return arrOfResults
+}
