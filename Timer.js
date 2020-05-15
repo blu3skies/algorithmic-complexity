@@ -1,6 +1,6 @@
 function timer(methodToTest) {
   var start = new Date().getTime();
-  methodToTest
+  methodToTest()
   var end = new Date().getTime();
   var time = end - start;
   return time
