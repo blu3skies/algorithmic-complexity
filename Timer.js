@@ -16,11 +16,6 @@ function findAverage(methodToTest, arrSize) {
   return (sum / arrOfTimes.length)
 }
 
-function codeToBeTested(arrSize) {
-  var array = randomArray(arrSize) 
-  array.reverse();
-}
-
 function results(methodToTest) {
   var arrOfResults = []
   var start = 5000
